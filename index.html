@@ -17,46 +17,50 @@
         <div class="copyright">Photo by Halie West on Unsplash</div>
       </div>
       <div class="signup">
-        <div>
+        <div class="bold">
           This is not a real online service! You know you need something like
           this in your life to hele you realize your deepest derams. Sign up
           <em>now</em> to get start.
         </div>
-        <div>You <em>know</em> you want to.</div>
+        <div class="twog bold">You <em>know</em> you want to.</div>
         <form action="/signup" method="POST">
-          <div class="name">
-            <div>
-              <label for="firstname">FIRST NAME</label>
-              <input type="text" id="firstname" name="firstname" required />
+          <div class="fields">
+            <div class="bold">Let's do this!</div>
+            <div class="name">
+              <div>
+                <label for="firstname">FIRST NAME</label>
+                <input type="text" id="firstname" name="firstname" />
+              </div>
+              <div>
+                <label for="lastname">LAST NAME</label>
+                <input type="text" id="lastname" name="lastname" />
+              </div>
             </div>
-            <div>
-              <label for="lastname">LAST NAME</label>
-              <input type="text" id="lastname" name="lastname" required />
+            <div class="contact">
+              <div>
+                <label for="email">EMAIL</label>
+                <input type="email" id="email" name="email" />
+              </div>
+              <div>
+                <label for="phonenumber">PHONE NUMBER</label>
+                <input type="tel" id="phonenumber" name="phonenumber" />
+              </div>
             </div>
-          </div>
-          <div class="contact">
-            <div>
-              <label for="email">EMAIL</label>
-              <input type="email" id="email" name="email" required />
-            </div>
-            <div>
-              <label for="phonenumber">PHONE NUMBER</label>
-              <input type="tel" id="phonenumber" name="phonenumber" required />
-            </div>
-          </div>
-          <div class="psw">
-            <div>
-              <label for="password">Password:</label>
-              <input type="password" id="password" name="password" required />
-            </div>
-            <div>
-              <label for="confirmpassword">CONFIRM PASSWORD</label>
-              <input type="password" id="confirmpassword" required />
+            <div class="psw">
+              <div>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required />
+              </div>
+              <div>
+                <label for="confirmpassword">CONFIRM PASSWORD</label>
+                <input type="password" id="confirmpassword" required />
+              </div>
             </div>
           </div>
 
           <button type="submit">Create Account</button>
         </form>
+        <div class="login">Already have an account? Log in</div>
       </div>
     </div>
   </body>

@@ -5,6 +5,81 @@
   font-weight: normal;
   font-style: normal;
 }
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* 3. Enable keyword animations */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+
+body {
+  /* 4. Add accessible line-height */
+
+  /* 5. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 6. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 7. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* 8. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* 9. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+/*
+10. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+}
 body {
   margin: 0;
   padding: 0;
@@ -15,9 +90,10 @@ body {
   margin: 0;
   display: flex;
   flex-direction: row;
+  background-color: #f9fafb;
 }
 .background {
-  flex: 2;
+  flex: 1;
   height: 100vh;
   background-image: url(img/background.avif);
   background-size: cover;
@@ -28,7 +104,7 @@ body {
   position: relative;
   height: 15%;
   width: 100%;
-  top: 30%;
+  top: 22%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -41,7 +117,7 @@ body {
   height: 90%;
 }
 .logo span {
-  font-family: "norsebold";
+  font-family: "norsebold", Arial, Helvetica, sans-serif;
 }
 .copyright {
   position: relative;
@@ -51,32 +127,55 @@ body {
   text-align: center;
 }
 .signup {
-  flex: 3;
+  flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  padding: 20px;
+}
+.bold {
+  font-weight: bold;
+  font-size: 16px;
+}
+.twog {
+  margin-top: 20px;
+}
+.signup > div,
+.fields > div {
+  padding: 0 100px 0px 30px;
 }
 form {
   display: flex;
-  width: 70vw;
+  width: 63vw;
   flex-wrap: wrap;
   flex-direction: column;
+  margin-top: 50px;
 }
-form > div {
-  display: flex;
-  flex-direction: row;
-  gap: 40px;
-}
-form div div {
+.fields {
   display: flex;
   flex-direction: column;
+  background-color: white;
+  gap: 10px;
+  box-shadow: 0px 2px 4px #c9c9c9, 0px 0px 1px#c9c9c9;
+  padding-bottom: 30px;
+  padding-top: 10px;
+}
+label {
+  font-size: 10px;
+}
+.fields > div {
+  display: flex;
+  flex-direction: row;
   flex: 1;
-  margin: 10px;
+  gap: 40px;
+}
+.fields div div {
+  display: flex;
+  flex-direction: column;
 }
 input {
   border: 2px solid #e5e7eb;
+  border-radius: 5px;
+  width: 200px;
 }
 input:invalid {
   border: 2px solid red;
@@ -84,13 +183,25 @@ input:invalid {
 input:focus {
   outline: none;
   border: 2px solid blue;
-  box-shadow: 1px 1px 3px #719ece;
+  box-shadow: 1px 1px 3px #c2c7cc;
 }
 
 button[type="submit"] {
   background-color: #596d48;
   color: white;
+  width: 170px;
+  height: 35px;
   font-weight: bold;
+  font-size: 13px;
   border: none;
   cursor: pointer;
+  align-self: flex-start;
+  margin-left: 30px;
+  margin-top: 22px;
+  border-radius: 5px;
+}
+.login {
+  margin-top: 20px;
+  padding: 0 30px;
+  font-size: 13px;
 }
