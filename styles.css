@@ -177,7 +177,7 @@ input {
 input {
   border: 2px solid #e5e7eb;
   border-radius: 5px;
-  width: 200px;
+  width: 17vw;
 }
 input:invalid {
   border: 2px solid red;
@@ -191,7 +191,7 @@ input:focus {
 button[type="submit"] {
   background-color: #596d48;
   color: white;
-  width: 170px;
+  width: 14vw;
   height: 35px;
   font-weight: bold;
   font-size: max(13px, 1vw);
