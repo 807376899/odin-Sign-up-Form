@@ -134,14 +134,15 @@ body {
 }
 .bold {
   font-weight: bold;
-  font-size: 16px;
+  font-size: max(16px, 1.5vw);
 }
 .twog {
   margin-top: 20px;
 }
 .signup > div,
 .fields > div {
-  padding: 0 100px 0px 30px;
+  padding-left: max(30px, 3vw);
+  padding-right: max(100px, 10vw);
 }
 form {
   display: flex;
@@ -159,8 +160,9 @@ form {
   padding-bottom: 30px;
   padding-top: 10px;
 }
-label {
-  font-size: 10px;
+label,
+input {
+  font-size: max(10px, 1vw);
 }
 .fields > div {
   display: flex;
@@ -192,11 +194,11 @@ button[type="submit"] {
   width: 170px;
   height: 35px;
   font-weight: bold;
-  font-size: 13px;
+  font-size: max(13px, 1vw);
   border: none;
   cursor: pointer;
   align-self: flex-start;
-  margin-left: 30px;
+  margin-left: max(30px, 3vw);
   margin-top: 22px;
   border-radius: 5px;
 }
@@ -204,4 +206,12 @@ button[type="submit"] {
   margin-top: 20px;
   padding: 0 30px;
   font-size: 13px;
+}
+.copyright a {
+  color: white;
+}
+.login a {
+  color: #596d48;
+  text-decoration: none;
+  font-weight: bold;
 }
